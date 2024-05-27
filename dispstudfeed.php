@@ -27,7 +27,7 @@ if(mysqli_num_rows($result) > 0){
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Feedback History</title>
+    <title>Feedback history</title>
     <style>
         body {
             margin: 0;
