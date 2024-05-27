@@ -31,7 +31,7 @@ if (mysqli_num_rows($result) > 0) {
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Admin Dashboard</title>
+    <title>Admin dashboard</title>
     <style>
         /* Your CSS styles here */
 
@@ -142,7 +142,7 @@ if (mysqli_num_rows($result) > 0) {
         <table>
             <thead>
                 <tr>
-                    <th>Teacher ID</th>
+                    <th>teacher ID</th>
                     <th>Total Feedback Count</th>
                     <th>Reviewed Feedback Count</th>
                     <th>Positive Feedback Percentage</th>
