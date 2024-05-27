@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html>
+<head id="Head"><title>
+	 Login
+</title><style>
+    body{
+    margin: 0;
+     padding: 0;
+     background-size: cover;
+     font-family: sans-serif;
+     background:#535250;
+ }
+ 
+ #content{
+     background-color: rgba(255, 255, 255, 0.95);
+     width: 420px;
+     height: 280px;
+     border: 1px solid #000000;
+     border-radius: 6px;
+     padding: 10px;
+     margin-top: 15%;
+     margin-left: auto;
+     margin-right: auto;
+     display: block;
+ }
+ 
+ .login-header{
+     width: 100%;
+     height: 38px;
+     margin-bottom: 10px;
+     border-bottom: 1px solid #037cb1;
+ }
+ .label{
+    margin-left: 41px;
+    margin-top: 5px;
+
+ }
+ 
+ 
+ .login-input-box-code input{
+     
+     width: 150px;
+     height: 32px;
+     margin-left: 12px;
+     border: 1px solid #dcdcdc;
+     border-radius: 4px;
+     padding-left: 42px;
+ }
+ 
+ .login-input-box-code input:hover{
+     border: 1px solid #037cb1;
+     outline:0;
+ 
+ }
+ 
+ .login-input-box-code input:focus{
+     border: 1px solid #037cb1;
+     outline:0;
+ }
+
+  
+ .login-input-box{
+     margin-top: 8px;
+     width: 100%;
+     margin-left: auto;
+     margin-right: auto;
+     display: inline-block;
+ 
+ }
+ 
+ .login-input-box input{
+     width: 350px;
+     height: 32px;
+     margin-left: 18px;
+     border: 1px solid #dcdcdc;
+     border-radius: 4px;
+     padding-left: 22px;
+ }
+ 
+ .login-input-box input:hover{
+     border: 1px solid #037cb1;
+     outline:0;
+     box-shadow:inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgba(102,175,233,.6);
+ 
+ }
+ 
+ .login-input-box input:focus{
+     border: 1px solid #037cb1;
+     outline:0;
+     box-shadow:inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgba(102,175,233,.6);
+ 
+ }
+ 
+ 
+ 
+ .login-button-box{
+     margin-top: 25px;
+     background-color: #037cb1;
+     color: #ffffff;
+     font-size: 16px;
+     width: 200px;
+     height: 40px;
+     margin-left: 115px;
+     border: 2px solid #099ee0;
+     border-radius: 6px;
+     cursor:pointer;
+   
+ }
+ 
+ .logon-box{
+     margin-top: 20px;
+     text-align: center;
+ }
+ 
+ .logon-box a{
+     margin: 30px;
+     color: #4a4744;
+     font-size: 13px;
+     text-decoration: none;
+ }
+
+</style>
+<?php
+    // Get the value of the text field
+$text_field_value = $_POST['text_field'];
+
+// Check if the text field is empty
+if (empty($text_field_value)) {
+    // If the text field is empty, display an error message
+    echo "Error: Text field cannot be empty.";
+} else {
+    // Use regular expression to validate the input
+    if (preg_match('/^[a-zA-Z]+$/', $text_field_value)) {
+        // If the input only contains letters A to Z and a to z, use it in your application
+        echo "Input is valid: " . $text_field_value;
+    } else {
+        // If the input contains other characters, display an error message
+        echo "Error: Input should only contain letters from A to Z and a to z.";
+    }
+}
+?>
+
+</head>
+
+<body>
+    
+    <div style="transform:translateX(100)">  
+    </div>
+    <div id="content">             
+    <div class="login-header">
+        <h2><center>Login</center></h2>
+    </div>
+    <form name="login" method="post" action="" >
+        <div class="label"><label>Username</label></div>
+        <div class="login-input-box">
+            <input name="txtLoginName" type="text" id="txtLoginName" placeholder="Enter your username" />
+        </div>
+        <div class="label"><label>Password</label></div>
+        <div class="login-input-box">
+            <input name="txtLoginPass" type="password" id="txtLoginPass" placeholder="Enter your password" />
+        </div>
+        <div >                          
+            <input type="submit" name="btnLogin" value="Log in" id="btnLogin" class="login-button-box" style="height:34px;" />
+        </div>
+    </form>
+   
+</div>
+
+</body>
+</html>
